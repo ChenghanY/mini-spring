@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'framework.james.com'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+/**
+ * 设置中心仓库
+ */
+repositories {
+    // 默认使用maven中心仓库
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+/**
+ * 设置字符编码
+ */
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+subprojects {
+    
+}
